@@ -11,9 +11,8 @@ export class AppComponent {
   usuario : string = '';
   senha : string = '';
 
-constructor(private httpClient : HttpClient){
+constructor(private httpClient : HttpClient){ }
 
-}
 
 public login(){
   this.httpClient.post('http://localhost:3003/login', {name : this.usuario, password : this.senha}).toPromise().then((response : any)=> {
